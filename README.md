@@ -79,14 +79,14 @@ So how much faster than decimal.js is break_infinity.js?
 Operations per second comparison using the same computer with these benchmarks
 [link](https://jsbench.me/3ckwankwz8/1) [link](https://jsbench.me/3ckwankwz8/2):
 
-| Project | decimal.js | break_infinity.js | Speedup |
-|---------|------------|-------------------|---------|
-| `new Decimal("1.23456789e987654321")` | 1.6e6 | 4.5e6 | 2.8x |
-| `Decimal.add("1e999", "9e998")`       | 1.3e6 | 3.2e6 | 2.5x |
-| `Decimal.mul("1e999", "9e998")`       | 1.3e6 | 3.8e6 | 2.9x |
-| `Decimal.log10("987.654e789")`        | 3.9e4 | 4.7e6 | 121x |
-| `Decimal.exp(1e10)`                   | 1.1e4 | 4.3e6 | 401x |
-| `Decimal.pow(987.789, 123.321)`       | 1.3e4 | 5.8e6 | 442x |
+| Project | Value | decimal.js | break_infinity.js | Speedup |
+|---------|-------|-----|-------------------|---------|
+| `new Decimal("1.23456789e987654321")` | 1.23456789e987 M | 1.6e6 | 4.5e6 | 2.8x |
+| `Decimal.add("1e999", "9e998")`       | 1.9e999 = 1.9TTgTc |1.3e6 | 3.2e6 | 2.5x |
+| `Decimal.mul("1e999", "9e998")`       | 9e1997 = 900 SxSeSc |1.3e6 | 3.8e6 | 2.9x |
+| `Decimal.log10("987.654e789")`        | ≈791.994 |3.9e4 | 4.7e6 | 121x |
+| `Decimal.exp(1e10)`                   | ?e4 B |1.1e4 | 4.3e6 | 401x |
+| `Decimal.pow(987.789, 123.321)`       | 1e395 |1.3e4 | 5.8e6 | 442x |
 
 [Antimatter Dimensions](https://github.com/IvarK/IvarK.github.io) script time
 improved by 4.5x after swapping from decimal.js to break_infinity.js.
